@@ -1,23 +1,26 @@
 package com.dwep1337.geolocation.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
+import lombok.Data;
 
+@Data
 @Builder
-public record GeoIPResponse(
-        Boolean success,
-        String ipAddress,
-        String country,
-        String countryIsoCode,
-        String city,
-        String subdivision,
-        Double latitude,
-        Double longitude,
-        String postalCode,
-        Integer postalConfidence,
-        Boolean isVpn,
-        Boolean isProxy,
-        String timezone,
-        String continent,
-        Integer metroCode
-) {
+public class GeoIPResponse {
+    private boolean success;
+    private String message;
+    private String ipAddress;
+    private String country;
+    private String countryIsoCode;
+    private String city;
+    private String subdivision;
+    private Double latitude;
+    private Double longitude;
+    private String postalCode;
+    private Integer postalConfidence;
+    private Boolean isVpn;
+    private Boolean isProxy;
+    private String timezone;
+    private String continent;
+    private Integer metroCode;
 }
